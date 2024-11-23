@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: url('https://cdn.arifzyn.tech/f/04i4wdqj.jpg') center/cover fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  z-index: -1;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  animation: fadeIn 1s ease;
+}
+
+.profile-frame {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-frame::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff00ff, #00ff00, #ff00ff);
+  animation: rotate 3s linear infinite;
+  z-index: 1;
+}
+
+.profile h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.profile p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  animation: slideUp 0.5s ease forwards;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transition: 0.5s;
+}
+
+.link:hover::before {
+  left: 100%;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.link i {
+  margin-right: 15px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: bounceIn 0.5s ease forwards;
+  opacity: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px) rotate(360deg);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Anime-style decorative elements */
+.sakura {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: url('/api/placeholder/20/20') no-repeat;
+  pointer-events: none;
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    top: -10%;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    top: 100%;
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1s ease;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.footer-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo i {
+  color: #ff69b4;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer-wave {
+  width: 100%;
+  height: 60px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.footer-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-stats {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.stat-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff69b4;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.footer-badge:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}

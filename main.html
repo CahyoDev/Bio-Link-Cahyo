@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bio Links | Arifzyn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 30px;
+      animation: fadeIn 1s ease;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 15px;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .profile p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 15px 20px;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      animation: slideUp 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .link i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      animation: bounceIn 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .social-icons a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+
+      50% {
+        opacity: 0.9;
+        transform: scale(1.1);
+      }
+
+      80% {
+        opacity: 1;
+        transform: scale(0.89);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="https://cdn.arifzyn.tech/f/la7464cv.jpg" alt="Profile Picture">
+      <h1>Arifzyn XD</h1>
+      <p>Web Developer ⚡ | Content Creator 🎥 <br> Anime, Manga & Light Novel Enthusiast 📚</p>
+      <p>"Halo! Saya Arifzyn, pengembang web dan kreator konten yang selalu mencari inspirasi dari dunia anime dan teknologi. Mari kita berkreasi bersama!"</p>
+    </div>
+
+    <div class="links">
+      <a href="#" class="link" style="animation-delay: 0.1s">
+        <i class="fas fa-globe"></i>
+        Personal Website
+      </a>
+            <a href="#" class="link" style="animation-delay: 0.1s">
+        <i class="fas fa-globe"></i>
+        Shop Website
+      </a>
+            <a href="#" class="link" style="animation-delay: 0.1s">
+        <i class="fas fa-globe"></i>
+        API Website
+      </a>
+      <a href="#" class="link" style="animation-delay: 0.2s">
+        <i class="fab fa-youtube"></i>
+        YouTube Channel
+      </a>
+      <a href="#" class="link" style="animation-delay: 0.3s">
+        <i class="fab fa-instagram"></i>
+        Instagram
+      </a>
+      <a href="#" class="link" style="animation-delay: 0.4s">
+        <i class="fab fa-twitter"></i>
+        Twitter
+      </a>
+    </div>
+
+    <div class="social-icons">
+      <a href="#" style="animation-delay: 0.5s">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" style="animation-delay: 0.6s">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" style="animation-delay: 0.7s">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="#" style="animation-delay: 0.8s">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
