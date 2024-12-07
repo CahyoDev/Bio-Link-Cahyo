@@ -103,7 +103,6 @@ class SnowEffect {
   }
 }
 
-// Inisialisasi efek salju saat halaman dimuat
 window.addEventListener('load', () => {
   new SnowEffect();
 });
