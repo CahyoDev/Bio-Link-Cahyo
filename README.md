@@ -23,21 +23,11 @@ A modern, animated bio link landing page showcasing social media profiles, perso
 - Font Awesome 6.0.0
 - SVG for wave animations
 
-## 📋 Project Structure
-
-```
-biolink/
-├── index.html
-├── style.css
-├── main.js
-└── README.md
-```
-
 ## 🚀 Setup and Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/biolink.git
+git clone https://github.com/Arifzyn19/biolink.git
 ```
 
 2. Navigate to the project directory:
